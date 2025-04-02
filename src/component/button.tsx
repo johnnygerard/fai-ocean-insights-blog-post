@@ -10,9 +10,10 @@ type ButtonProps = DetailedHTMLProps<
 type Props = ButtonProps & { variant: "primary" | "text" };
 
 export const Button = memo(
-  ({ children, className, variant, ...props }: Props) => {
+  ({ children, className, type, variant, ...props }: Props) => {
     return (
       <button
+        type={type ?? "button"}
         className={cn(
           "text-[0.9375rem]/[1.25rem] font-medium",
           {
