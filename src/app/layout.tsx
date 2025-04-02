@@ -1,3 +1,4 @@
+import { Header } from "@/component/header";
 import { Noscript } from "@/component/noscript";
 import { cn } from "@/util/cn";
 import type { Metadata } from "next";
@@ -39,7 +40,8 @@ type Props = {
 const RootLayout = ({ children }: Props) => {
   return (
     <html className={cn(outfit.variable, "font-sans antialiased")} lang="en-US">
-      <body className="bg-[#0D0402]">
+      <body className="bg-[#0D0402] px-12">
+        <Header />
         {children}
         <Noscript />
       </body>
