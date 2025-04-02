@@ -42,7 +42,7 @@ const RootLayout = ({ children }: Props) => {
       className={cn(geistSans.variable, "font-sans antialiased")}
       lang="en-US"
     >
-      <body>
+      <body className="bg-[#0D0402]">
         {children}
         <Noscript />
       </body>
