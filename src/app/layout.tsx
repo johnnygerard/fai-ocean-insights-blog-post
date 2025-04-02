@@ -40,7 +40,12 @@ type Props = {
 const RootLayout = ({ children }: Props) => {
   return (
     <html className={cn(outfit.variable, "font-sans antialiased")} lang="en-US">
-      <body className="bg-[#0D0402] px-12">
+      <body
+        className={cn(
+          "text-[1.0625rem]/[1.75rem] text-[#E4DAD7]",
+          "bg-[#0D0402] px-12",
+        )}
+      >
         <Header />
         {children}
         <Noscript />
