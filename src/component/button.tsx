@@ -18,7 +18,7 @@ export const Button = memo(
           "text-[0.9375rem]/[1.25rem] font-medium",
           {
             text: "",
-            primary: "rounded-lg bg-[#FF5733] px-4 py-2 text-[#050100]",
+            primary: "rounded-lg bg-accent px-4 py-2 text-[#050100]",
           }[variant],
           className,
         )}
