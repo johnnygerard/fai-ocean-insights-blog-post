@@ -11,15 +11,16 @@ const geistSans = Geist({
   variable: "--font-geist-sans",
 });
 
-const APP_NAME = "appName";
-const TITLE = "title";
-const DESCRIPTION = "description";
+const APP_NAME = "OceanInsights";
+const TITLE = "Exploring the Depths of the Ocean";
+const DESCRIPTION =
+  "A fascinating journey into the mysteries of the ocean, uncovering the unknown and the beauty beneath the waves.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://placeholder.example.com"),
   title: {
     template: `%s | ${APP_NAME}`,
-    default: TITLE,
+    default: `${TITLE} | ${APP_NAME}`,
   },
   description: DESCRIPTION,
   openGraph: {
