@@ -52,7 +52,7 @@ const RootLayout = ({ children }: Props) => {
       <body
         className={cn(
           "text-[1.0625rem]/[1.75rem] text-[#E4DAD7]",
-          "bg-[#0D0402] px-12",
+          "bg-[#0D0402]",
         )}
       >
         <Header />
