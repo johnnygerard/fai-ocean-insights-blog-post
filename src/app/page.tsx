@@ -3,6 +3,7 @@ import hydrothermalVent from "@/asset/image/hydrothermal-vent.png";
 import { ArticleHeader } from "@/component/article-header";
 import { ArticleSection } from "@/component/article-section";
 import { Gallery } from "@/component/gallery";
+import { RelatedArticles } from "@/component/related-articles";
 import { ArticleJson } from "@/type/article-json";
 import Image from "next/image";
 import { readFile } from "node:fs/promises";
@@ -55,6 +56,7 @@ const HomePage = async () => {
         <ArticleSection {...articleSections[2]} />
         <Gallery />
         <ArticleSection {...articleSections[3]} />
+        <RelatedArticles articles={article.relatedArticles} />
       </article>
     </main>
   );

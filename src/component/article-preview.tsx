@@ -1,25 +1,28 @@
+import { ArticleJson } from "@/type/article-json";
 import { formatDate } from "@/util/format-date";
 import Image from "next/image";
 import { memo } from "react";
 
 type Props = {
   className?: string;
-  image: {
-    src: string;
-    alt: string;
-  };
-  title: string;
-  tags: string[];
-  date: string;
+  article: ArticleJson["relatedArticles"][number];
 };
 
 export const ArticlePreview = memo(
-  ({ className, image: { src, alt }, title, tags, date }: Props) => {
+  ({
+    className,
+    article: {
+      image: { name, alt },
+      title,
+      tags,
+      date,
+    },
+  }: Props) => {
     return (
       <div className={className}>
         <Image
-          className="h-56 w-auto rounded-lg object-cover"
-          src={src}
+          className="h-56 w-full rounded-lg object-cover"
+          src={`/asset/image/article-preview/${name}`}
           alt={alt}
           width={704}
           height={384}
