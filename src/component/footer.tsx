@@ -11,7 +11,7 @@ type Props = {
 export const Footer = memo(({ className }: Props) => {
   return (
     <footer className={cn("border-t border-[#B6979133] p-12 pt-6", className)}>
-      <nav className="flex gap-12">
+      <nav className="flex gap-12" aria-label="Footer">
         <div className="flex flex-1 flex-col justify-between">
           <Logo />
           <SocialMediaLinks />
