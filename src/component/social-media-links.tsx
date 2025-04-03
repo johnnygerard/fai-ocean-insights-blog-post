@@ -21,7 +21,7 @@ export const SocialMediaLinks = memo(({ className }: Props) => {
         { Logo: LogoX, href: "https://x.com/" },
       ].map(({ Logo, href }, index) => (
         <li key={index}>
-          <Link href={href}>
+          <Link className="transition-[opacity] hover:opacity-80" href={href}>
             <Logo className="size-6" />
           </Link>
         </li>

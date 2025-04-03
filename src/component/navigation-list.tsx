@@ -23,7 +23,10 @@ export const NavigationList = memo(({ className, header, links }: Props) => {
       <li>{header}</li>
       {links.map(({ href, text }) => (
         <li key={href}>
-          <Link className="text-dim" href={href}>
+          <Link
+            className="text-dim transition-[opacity] hover:opacity-80"
+            href={href}
+          >
             {text}
           </Link>
         </li>

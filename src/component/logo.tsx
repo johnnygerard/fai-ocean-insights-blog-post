@@ -8,7 +8,7 @@ type Props = {
 
 export const Logo = memo(({ className }: Props) => {
   return (
-    <Link href="/">
+    <Link className="transition-[opacity] hover:opacity-80" href="/">
       <Image
         className={className}
         src="/asset/image/logo.svg"

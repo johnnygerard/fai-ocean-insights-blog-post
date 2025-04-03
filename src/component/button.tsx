@@ -16,6 +16,7 @@ export const Button = memo(
         type={type ?? "button"}
         className={cn(
           "text-[0.9375rem]/[1.25rem] font-medium",
+          "transition-[opacity] hover:opacity-90 active:opacity-80",
           {
             text: "",
             primary: "rounded-lg bg-accent px-4 py-2 text-[#050100]",
