@@ -30,25 +30,24 @@ export const ArticlePreview = memo(
           width={704}
           height={384}
         />
-        <hgroup className="mt-3 flex flex-col gap-2">
-          <h2 className="truncate text-[1.0625rem]/[1.5rem] font-semibold">
-            <Link
-              className={cn(
-                "underline decoration-transparent transition-[opacity,text-decoration-color]",
-                "hover:decoration-current hover:opacity-80",
-              )}
-              href={`/article/${slug}`}
-            >
-              {title}
-            </Link>
-          </h2>
+        <div className="mt-3 flex flex-col items-start gap-2">
+          <Link
+            className={cn(
+              "truncate text-[1.0625rem]/[1.5rem] font-semibold",
+              "underline decoration-transparent transition-[opacity,text-decoration-color]",
+              "hover:decoration-current hover:opacity-80",
+            )}
+            href={`/article/${slug}`}
+          >
+            {title}
+          </Link>
           <p className="truncate text-[0.8125rem]/[1rem] font-medium text-accent">
             {tags.join(", ")}
           </p>
-        </hgroup>
-        <p className="mt-2 truncate text-[0.8125rem]/[1rem] text-dim">
-          <time dateTime={date}>{formatDate(date)}</time>
-        </p>
+          <p className="truncate text-[0.8125rem]/[1rem] text-dim">
+            <time dateTime={date}>{formatDate(date)}</time>
+          </p>
+        </div>
       </div>
     );
   },
