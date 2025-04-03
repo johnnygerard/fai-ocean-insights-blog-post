@@ -2,6 +2,7 @@ import { LogoFacebook } from "@/component/svg/logo-facebook";
 import { LogoInstagram } from "@/component/svg/logo-instagram";
 import { LogoX } from "@/component/svg/logo-x";
 import { cn } from "@/util/cn";
+import Link from "next/link";
 import { memo } from "react";
 
 type Props = {
@@ -10,10 +11,19 @@ type Props = {
 
 export const SocialMediaLinks = memo(({ className }: Props) => {
   return (
-    <ul className={cn("flex items-center gap-3", className)}>
-      {[LogoFacebook, LogoInstagram, LogoX].map((Logo, index) => (
+    <ul
+      aria-label="Social Media Links"
+      className={cn("flex items-center gap-3", className)}
+    >
+      {[
+        { Logo: LogoFacebook, href: "https://www.facebook.com/" },
+        { Logo: LogoInstagram, href: "https://www.instagram.com/" },
+        { Logo: LogoX, href: "https://x.com/" },
+      ].map(({ Logo, href }, index) => (
         <li key={index}>
-          <Logo className="size-6" />
+          <Link href={href}>
+            <Logo className="size-6" />
+          </Link>
         </li>
       ))}
     </ul>
