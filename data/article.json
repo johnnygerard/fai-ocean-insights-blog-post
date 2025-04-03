@@ -7,7 +7,8 @@
       },
       "title": "The Secrets of Coral Reefs",
       "tags": ["Marine Biology"],
-      "date": "2023-10-10T00:00:00.000Z"
+      "date": "2023-10-10T00:00:00.000Z",
+      "slug": "the-secrets-of-coral-reefs"
     },
     {
       "image": {
@@ -16,7 +17,8 @@
       },
       "title": "Understanding Ocean Currents",
       "tags": ["Oceanography"],
-      "date": "2023-10-12T00:00:00.000Z"
+      "date": "2023-10-12T00:00:00.000Z",
+      "slug": "understanding-ocean-currents"
     },
     {
       "image": {
@@ -25,7 +27,8 @@
       },
       "title": "Protecting Marine Life",
       "tags": ["Conservation"],
-      "date": "2023-10-14T00:00:00.000Z"
+      "date": "2023-10-14T00:00:00.000Z",
+      "slug": "protecting-marine-life"
     }
   ],
   "sections": [

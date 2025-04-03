@@ -7,6 +7,7 @@ export type ArticleJson = {
     title: string;
     tags: string[];
     date: string;
+    slug: string;
   }[];
   sections: {
     heading: string;

@@ -1,6 +1,7 @@
 import { ArticleJson } from "@/type/article-json";
 import { formatDate } from "@/util/format-date";
 import Image from "next/image";
+import Link from "next/link";
 import { memo } from "react";
 
 type Props = {
@@ -16,6 +17,7 @@ export const ArticlePreview = memo(
       title,
       tags,
       date,
+      slug,
     },
   }: Props) => {
     return (
@@ -29,7 +31,7 @@ export const ArticlePreview = memo(
         />
         <hgroup className="mt-3 flex flex-col gap-2">
           <h2 className="truncate text-[1.0625rem]/[1.5rem] font-semibold">
-            {title}
+            <Link href={`/article/${slug}`}>{title}</Link>
           </h2>
           <p className="truncate text-[0.8125rem]/[1rem] font-medium text-accent">
             {tags.join(", ")}
