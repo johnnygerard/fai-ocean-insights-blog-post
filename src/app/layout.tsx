@@ -54,6 +54,7 @@ const RootLayout = ({ children }: Props) => {
         className={cn(
           "text-[1.0625rem]/[1.75rem] text-[#E4DAD7]",
           "mx-auto max-w-480 bg-[#0D0402]",
+          "flex min-h-screen flex-col",
         )}
       >
         <Header />
