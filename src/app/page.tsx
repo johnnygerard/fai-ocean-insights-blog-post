@@ -1,5 +1,6 @@
 import { ArticleSectionJson } from "@/article-section-json";
 import hero from "@/asset/image/hero.png";
+import hydrothermalVent from "@/asset/image/hydrothermal-vent.png";
 import { ArticleHeader } from "@/component/article-header";
 import { ArticleSection } from "@/component/article-section";
 import Image from "next/image";
@@ -39,6 +40,14 @@ const HomePage = async () => {
             muted
             playsInline
             preload="auto"
+          />
+        </div>
+        <ArticleSection {...articleSections[1]} />
+        <div className="my-6 px-12">
+          <Image
+            src={hydrothermalVent}
+            alt="A vibrant underwater scene showcasing a hydrothermal vent surrounded by colorful tube worms and various fish species swimming nearby."
+            className="w-full rounded-lg"
           />
         </div>
       </article>
