@@ -1,3 +1,4 @@
+import { Footer } from "@/component/footer";
 import { Header } from "@/component/header";
 import { Noscript } from "@/component/noscript";
 import { cn } from "@/util/cn";
@@ -57,6 +58,7 @@ const RootLayout = ({ children }: Props) => {
       >
         <Header />
         {children}
+        <Footer className="mt-24" />
         <Noscript />
       </body>
     </html>
