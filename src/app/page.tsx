@@ -28,6 +28,19 @@ const HomePage = async () => {
           className="my-6 w-full"
         />
         <ArticleSection {...articleSections[0]} />
+        <div className="my-6 px-12">
+          <video
+            src="/asset/video/coral-reefs.mp4"
+            className="w-full rounded-2xl"
+            width={1320}
+            height={720}
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+          />
+        </div>
       </article>
     </main>
   );
