@@ -33,7 +33,7 @@ const HomePage = async () => {
           <video
             src="/asset/video/coral-reefs.mp4"
             className="w-full rounded-2xl"
-            width={1320}
+            width={1312}
             height={720}
             autoPlay
             loop
