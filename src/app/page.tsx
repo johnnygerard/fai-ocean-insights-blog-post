@@ -1,9 +1,9 @@
-import { ArticleSectionJson } from "@/article-section-json";
 import hero from "@/asset/image/hero.png";
 import hydrothermalVent from "@/asset/image/hydrothermal-vent.png";
 import { ArticleHeader } from "@/component/article-header";
 import { ArticleSection } from "@/component/article-section";
 import { Gallery } from "@/component/gallery";
+import { ArticleJson } from "@/type/article-json";
 import Image from "next/image";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
@@ -11,9 +11,10 @@ import { cwd } from "node:process";
 import { memo } from "react";
 
 const HomePage = async () => {
-  const path = join(cwd(), "data/article-sections.json");
+  const path = join(cwd(), "data/article.json");
   const json = await readFile(path, "utf8");
-  const articleSections: ArticleSectionJson[] = JSON.parse(json);
+  const article: ArticleJson = JSON.parse(json);
+  const articleSections = article.sections;
 
   return (
     <main className="py-12">
