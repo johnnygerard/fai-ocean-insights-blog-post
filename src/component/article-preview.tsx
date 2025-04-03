@@ -34,13 +34,10 @@ export const ArticlePreview = memo(
           <p className="truncate text-[0.8125rem]/[1rem] font-medium text-accent">
             {tags.join(", ")}
           </p>
-          <time
-            className="truncate text-[0.8125rem]/[1rem] text-dim"
-            dateTime={date}
-          >
-            {formatDate(date)}
-          </time>
         </hgroup>
+        <p className="mt-2 truncate text-[0.8125rem]/[1rem] text-dim">
+          <time dateTime={date}>{formatDate(date)}</time>
+        </p>
       </div>
     );
   },
