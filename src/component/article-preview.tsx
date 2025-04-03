@@ -1,4 +1,5 @@
 import { ArticleJson } from "@/type/article-json";
+import { cn } from "@/util/cn";
 import { formatDate } from "@/util/format-date";
 import Image from "next/image";
 import Link from "next/link";
@@ -31,7 +32,15 @@ export const ArticlePreview = memo(
         />
         <hgroup className="mt-3 flex flex-col gap-2">
           <h2 className="truncate text-[1.0625rem]/[1.5rem] font-semibold">
-            <Link href={`/article/${slug}`}>{title}</Link>
+            <Link
+              className={cn(
+                "underline decoration-transparent transition-[opacity,text-decoration-color]",
+                "hover:decoration-current hover:opacity-80",
+              )}
+              href={`/article/${slug}`}
+            >
+              {title}
+            </Link>
           </h2>
           <p className="truncate text-[0.8125rem]/[1rem] font-medium text-accent">
             {tags.join(", ")}
