@@ -22,7 +22,11 @@
   --breakpoint-tb: 48em; /* Tablet: 768px */
   --breakpoint-dt: 90em; /* Desktop: 1440px */
 
-  --font-sans: var(--font-geist-sans);
+  --color-accent: #ff5733;
+  --color-dim: #ebd5d19e;
+
+  --font-display: var(--font-domine);
+  --font-sans: var(--font-outfit);
 
   --spacing: 0.25rem;
 
