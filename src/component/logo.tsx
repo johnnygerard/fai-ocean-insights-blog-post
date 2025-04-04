@@ -13,8 +13,8 @@ export const Logo = memo(({ className }: Props) => {
         className={className}
         src="/asset/image/logo.svg"
         alt="OceanInsights"
-        width="216"
-        height="32"
+        width={216}
+        height={32}
         priority
       />
     </Link>
