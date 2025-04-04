@@ -11,7 +11,7 @@ const NotFound = () => {
   return (
     <main className="grid flex-1 place-items-center">
       <div className="text-center">
-        <h1 className="mb-4 font-display text-[3rem] font-bold">
+        <h1 className="mb-4 font-display text-[3rem]/[3.6rem] font-bold">
           404 Not Found
         </h1>
         <p className="mb-6 text-[1.0625rem]/[1.75rem]">
