@@ -2,7 +2,7 @@ import { Footer } from "@/component/footer";
 import { Header } from "@/component/header";
 import { Noscript } from "@/component/noscript";
 import { cn } from "@/util/cn";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Domine, Outfit } from "next/font/google";
 import "./globals.css";
 import { memo, ReactNode } from "react";
@@ -38,6 +38,12 @@ export const metadata: Metadata = {
     title: TITLE,
     description: DESCRIPTION,
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
 };
 
 type Props = {
