@@ -8,7 +8,8 @@ type Props = {
 export const VerticalRule = memo(({ className }: Props) => {
   return (
     <svg
-      aria-hidden
+      role="separator"
+      aria-orientation="vertical"
       className={cn("h-8 w-0.5", className)}
       viewBox="0 0 2 32"
       fill="none"
