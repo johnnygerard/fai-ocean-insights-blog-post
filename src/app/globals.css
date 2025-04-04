@@ -25,6 +25,7 @@
   --breakpoint-xl: 90em; /* Desktop: 1440px */
 
   --color-accent: #ff5733;
+  --color-canvas: #0d0402;
   --color-dim: #ebd5d19e;
 
   --font-display: var(--font-domine);
