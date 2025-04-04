@@ -5,16 +5,12 @@ import { ArticleSection } from "@/component/article-section";
 import { Gallery } from "@/component/gallery";
 import { RelatedArticles } from "@/component/related-articles";
 import { ArticleJson } from "@/type/article-json";
+import articleJson from "@data/article.json";
 import Image from "next/image";
-import { readFile } from "node:fs/promises";
-import { join } from "node:path";
-import { cwd } from "node:process";
 import { memo } from "react";
 
 const HomePage = async () => {
-  const path = join(cwd(), "data/article.json");
-  const json = await readFile(path, "utf8");
-  const article: ArticleJson = JSON.parse(json);
+  const article: ArticleJson = articleJson;
   const articleSections = article.sections;
 
   return (
