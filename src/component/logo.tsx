@@ -1,3 +1,4 @@
+import { cn } from "@/util/cn";
 import Image from "next/image";
 import Link from "next/link";
 import { memo } from "react";
@@ -8,9 +9,11 @@ type Props = {
 
 export const Logo = memo(({ className }: Props) => {
   return (
-    <Link className="transition-[opacity] hover:opacity-80" href="/">
+    <Link
+      className={cn("transition-[opacity] hover:opacity-80", className)}
+      href="/"
+    >
       <Image
-        className={className}
         src="/asset/image/logo.svg"
         alt="OceanInsights"
         width={216}
