@@ -1,5 +1,5 @@
+import { FooterNavigationList } from "@/component/footer-navigation-list";
 import { Logo } from "@/component/logo";
-import { NavigationList } from "@/component/navigation-list";
 import { SocialMediaLinks } from "@/component/social-media-links";
 import { FooterNavigation } from "@/type/footer-navigation";
 import { cn } from "@/util/cn";
@@ -42,7 +42,7 @@ export const Footer = memo(({ className }: Props) => {
         >
           {navigation.map((nav) => (
             <li key={nav.header}>
-              <NavigationList {...nav} />
+              <FooterNavigationList {...nav} />
             </li>
           ))}
         </ul>
