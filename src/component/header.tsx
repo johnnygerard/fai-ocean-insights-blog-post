@@ -18,7 +18,7 @@ export const Header = memo(({ className }: Props) => {
         className,
       )}
     >
-      <Logo className="z-20 max-md:w-40" />
+      <Logo className="z-20" />
       <HeaderMenu>
         <Button variant="text">Download app</Button>
         <VerticalRule className="max-md:hidden" />

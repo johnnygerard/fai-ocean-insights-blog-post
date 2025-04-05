@@ -10,7 +10,10 @@ type Props = {
 export const Logo = memo(({ className }: Props) => {
   return (
     <Link
-      className={cn("transition-[opacity] hover:opacity-80", className)}
+      className={cn(
+        "transition-[opacity] hover:opacity-80 max-md:w-40",
+        className,
+      )}
       href="/"
     >
       <Image
