@@ -14,7 +14,7 @@ export const Header = memo(({ className }: Props) => {
     <header
       className={cn(
         "top-0 z-10 bg-canvas/90 max-md:sticky",
-        "flex items-center justify-between px-4 py-4 sm:px-8 md:px-12",
+        "tw_body_px flex items-center justify-between py-4",
         className,
       )}
     >

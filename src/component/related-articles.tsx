@@ -10,12 +10,7 @@ type Props = {
 
 export const RelatedArticles = memo(({ articles, className }: Props) => {
   return (
-    <aside
-      className={cn(
-        "px-4 py-6 sm:px-6 md:px-8 md:py-7 lg:px-12 lg:py-8",
-        className,
-      )}
-    >
+    <aside className={cn("tw_body_px py-6 md:py-7 lg:py-8", className)}>
       <nav aria-label="Related Articles">
         <h2
           className={cn(

@@ -16,7 +16,8 @@ export const Footer = memo(({ className }: Props) => {
   return (
     <footer
       className={cn(
-        "border-t border-[#B6979133] p-4 sm:p-6 sm:pt-4 md:p-8 md:pt-4 lg:p-12 lg:pt-6",
+        "border-t border-[#B6979133]",
+        "tw_body_px py-4 sm:pt-4 sm:pb-6 md:pt-4 md:pb-8 lg:pt-6 lg:pb-12",
         className,
       )}
     >
