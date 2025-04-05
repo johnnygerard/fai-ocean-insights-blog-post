@@ -40,9 +40,9 @@ export const Footer = memo(({ className }: Props) => {
             "max-sm:flex-col max-sm:items-center max-sm:text-center",
           )}
         >
-          {navigation.map((nav) => (
-            <li key={nav.header}>
-              <FooterNavigationList {...nav} />
+          {navigation.map((navigationList) => (
+            <li key={navigationList.header}>
+              <FooterNavigationList {...navigationList} />
             </li>
           ))}
         </ul>
