@@ -16,7 +16,7 @@ export const NavigationList = memo(({ className, header, links }: Props) => {
     <ul
       aria-label={header}
       className={cn(
-        "w-50 space-y-2 text-[0.9375rem]/[1.25rem] font-medium",
+        "space-y-2 text-[0.9375rem]/[1.25rem] font-medium sm:w-40 xl:w-50",
         className,
       )}
     >
