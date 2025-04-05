@@ -1,7 +1,9 @@
 import { Logo } from "@/component/logo";
 import { NavigationList } from "@/component/navigation-list";
 import { SocialMediaLinks } from "@/component/social-media-links";
+import { FooterNavigation } from "@/type/footer-navigation";
 import { cn } from "@/util/cn";
+import footerNavigation from "@data/footer-navigation.json";
 import { memo } from "react";
 
 type Props = {
@@ -9,6 +11,8 @@ type Props = {
 };
 
 export const Footer = memo(({ className }: Props) => {
+  const navigation: FooterNavigation = footerNavigation;
+
   return (
     <footer
       className={cn(
@@ -30,64 +34,18 @@ export const Footer = memo(({ className }: Props) => {
           <SocialMediaLinks />
         </div>
 
-        <div
+        <ul
           className={cn(
             "flex flex-wrap justify-between gap-8 sm:gap-10 md:gap-12",
             "max-sm:flex-col max-sm:items-center max-sm:text-center",
           )}
         >
-          <NavigationList
-            header="Explore"
-            links={[
-              {
-                href: "/explore/deep-sea",
-                text: "Deep Sea",
-              },
-              {
-                href: "/explore/marine-life",
-                text: "Marine Life",
-              },
-              {
-                href: "/explore/coral-reefs",
-                text: "Coral Reefs",
-              },
-            ]}
-          />
-          <NavigationList
-            header="Conservation"
-            links={[
-              {
-                href: "/conservation/initiatives",
-                text: "Initiatives",
-              },
-              {
-                href: "/conservation/research",
-                text: "Research",
-              },
-              {
-                href: "/conservation/get-involved",
-                text: "Get Involved",
-              },
-            ]}
-          />
-          <NavigationList
-            header="About Us"
-            links={[
-              {
-                href: "/about/our-mission",
-                text: "Our Mission",
-              },
-              {
-                href: "/about/team",
-                text: "Team",
-              },
-              {
-                href: "/about/contact",
-                text: "Contact",
-              },
-            ]}
-          />
-        </div>
+          {navigation.map((nav) => (
+            <li key={nav.header}>
+              <NavigationList {...nav} />
+            </li>
+          ))}
+        </ul>
       </nav>
     </footer>
   );
