@@ -1,7 +1,7 @@
 import { LogoFacebook } from "@/component/svg/logo-facebook";
 import { LogoInstagram } from "@/component/svg/logo-instagram";
 import { LogoX } from "@/component/svg/logo-x";
-import { cn } from "@/util/cn";
+import { clsx } from "clsx";
 import Link from "next/link";
 import { memo } from "react";
 
@@ -13,7 +13,7 @@ export const SocialMediaLinks = memo(({ className }: Props) => {
   return (
     <ul
       aria-label="Social Media Links"
-      className={cn("flex items-center gap-3", className)}
+      className={clsx("flex items-center gap-3", className)}
     >
       {[
         { Logo: LogoFacebook, href: "https://www.facebook.com/" },

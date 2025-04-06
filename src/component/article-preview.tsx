@@ -1,6 +1,6 @@
 import { ArticleJson } from "@/type/article-json";
-import { cn } from "@/util/cn";
 import { formatDate } from "@/util/format-date";
+import { clsx } from "clsx";
 import Image from "next/image";
 import Link from "next/link";
 import { memo } from "react";
@@ -32,7 +32,7 @@ export const ArticlePreview = memo(
         />
         <div className="mt-3 flex flex-col items-start gap-2">
           <Link
-            className={cn(
+            className={clsx(
               "truncate text-base leading-6 font-semibold",
               "underline decoration-transparent transition-[opacity,text-decoration-color]",
               "hover:decoration-current hover:opacity-80",

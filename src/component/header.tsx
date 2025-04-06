@@ -2,7 +2,7 @@ import { Button } from "@/component/button";
 import { HeaderMenu } from "@/component/header-menu";
 import { Logo } from "@/component/logo";
 import { VerticalRule } from "@/component/svg/vertical-rule";
-import { cn } from "@/util/cn";
+import { clsx } from "clsx";
 import { memo } from "react";
 
 type Props = {
@@ -12,7 +12,7 @@ type Props = {
 export const Header = memo(({ className }: Props) => {
   return (
     <header
-      className={cn(
+      className={clsx(
         "top-0 z-10 bg-canvas/90 max-md:sticky",
         "tw_body_px flex items-center justify-between py-4",
         className,

@@ -1,7 +1,7 @@
 import { Footer } from "@/component/footer";
 import { Header } from "@/component/header";
 import { Noscript } from "@/component/noscript";
-import { cn } from "@/util/cn";
+import { clsx } from "clsx";
 import type { Metadata, Viewport } from "next";
 import { Domine, Outfit } from "next/font/google";
 import "./globals.css";
@@ -53,11 +53,15 @@ type Props = {
 const RootLayout = ({ children }: Props) => {
   return (
     <html
-      className={cn(outfit.variable, domine.variable, "font-sans antialiased")}
+      className={clsx(
+        outfit.variable,
+        domine.variable,
+        "font-sans antialiased",
+      )}
       lang="en-US"
     >
       <body
-        className={cn(
+        className={clsx(
           "mx-auto max-w-480 bg-canvas text-base text-[#E4DAD7]",
           "flex min-h-screen flex-col",
         )}

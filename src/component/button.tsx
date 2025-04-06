@@ -1,4 +1,4 @@
-import { cn } from "@/util/cn";
+import { clsx } from "clsx";
 import type { ButtonHTMLAttributes, DetailedHTMLProps } from "react";
 import { memo } from "react";
 
@@ -14,7 +14,7 @@ export const Button = memo(
     return (
       <button
         type={type ?? "button"}
-        className={cn(
+        className={clsx(
           "text-label-1 font-medium",
           "transition-[opacity] hover:opacity-90 active:opacity-80",
           {

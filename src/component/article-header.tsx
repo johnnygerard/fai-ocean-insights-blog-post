@@ -1,6 +1,6 @@
 import { Author } from "@/component/author";
-import { cn } from "@/util/cn";
 import { formatDate } from "@/util/format-date";
+import { clsx } from "clsx";
 import { memo } from "react";
 
 type Props = {
@@ -15,7 +15,7 @@ export const ArticleHeader = memo(({ className, date, tags, title }: Props) => {
     <header className="mx-auto max-w-180 py-6">
       <hgroup>
         <p
-          className={cn(
+          className={clsx(
             "truncate text-label-1 font-medium text-accent",
             className,
           )}

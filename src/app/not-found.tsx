@@ -1,4 +1,4 @@
-import { cn } from "@/util/cn";
+import { clsx } from "clsx";
 import { Metadata } from "next";
 import Link from "next/link";
 import { memo } from "react";
@@ -17,7 +17,7 @@ const NotFound = () => {
         </p>
         <Link
           href="/"
-          className={cn(
+          className={clsx(
             "font-medium text-accent",
             "transition-[opacity] hover:opacity-80",
           )}

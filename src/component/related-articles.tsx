@@ -1,6 +1,6 @@
 import { ArticlePreview } from "@/component/article-preview";
 import { ArticleJson } from "@/type/article-json";
-import { cn } from "@/util/cn";
+import { clsx } from "clsx";
 import { memo } from "react";
 
 type Props = {
@@ -10,10 +10,10 @@ type Props = {
 
 export const RelatedArticles = memo(({ articles, className }: Props) => {
   return (
-    <aside className={cn("tw_body_px py-6 md:py-7 lg:py-8", className)}>
+    <aside className={clsx("tw_body_px py-6 md:py-7 lg:py-8", className)}>
       <nav aria-label="Related Articles">
         <h2
-          className={cn(
+          className={clsx(
             "border-t-[1.5px] border-[#B6979133]",
             "py-3 font-display text-h2 font-bold -tracking-[0.035rem] md:py-4",
           )}

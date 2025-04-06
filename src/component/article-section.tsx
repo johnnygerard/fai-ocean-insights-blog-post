@@ -1,4 +1,4 @@
-import { cn } from "@/util/cn";
+import { clsx } from "clsx";
 import { memo } from "react";
 
 type Props = {
@@ -10,14 +10,14 @@ type Props = {
 export const ArticleSection = memo(({ className, heading, content }: Props) => {
   return (
     <section
-      className={cn(
+      className={clsx(
         "tw_body_px mx-auto w-full max-w-180",
         "py-6 sm:py-8 md:py-10 lg:py-12",
         className,
       )}
     >
       <h2
-        className={cn(
+        className={clsx(
           "font-display text-h2 font-bold",
           "-tracking-[0.025rem] lg:-tracking-[0.035rem]",
         )}

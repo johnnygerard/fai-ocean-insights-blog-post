@@ -1,4 +1,4 @@
-import { cn } from "@/util/cn";
+import { clsx } from "clsx";
 import Image from "next/image";
 import Link from "next/link";
 import { memo } from "react";
@@ -10,7 +10,7 @@ type Props = {
 export const Logo = memo(({ className }: Props) => {
   return (
     <Link
-      className={cn(
+      className={clsx(
         "transition-[opacity] hover:opacity-80 max-md:w-40",
         className,
       )}

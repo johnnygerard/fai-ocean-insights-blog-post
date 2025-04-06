@@ -1,4 +1,4 @@
-import { cn } from "@/util/cn";
+import { clsx } from "clsx";
 import Link from "next/link";
 import { memo } from "react";
 
@@ -16,7 +16,7 @@ export const FooterNavigationList = memo(
     return (
       <ul
         aria-label={header}
-        className={cn(
+        className={clsx(
           "space-y-2 text-label-1 font-medium sm:w-40 xl:w-50",
           className,
         )}

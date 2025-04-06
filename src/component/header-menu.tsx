@@ -1,5 +1,5 @@
 "use client";
-import { cn } from "@/util/cn";
+import { clsx } from "clsx";
 import { memo, ReactNode, useState } from "react";
 
 type Props = {
@@ -33,7 +33,7 @@ export const HeaderMenu = memo(({ children }: Props) => {
       {/* Menu Sidebar */}
       <div
         id="menu-sidebar"
-        className={cn(
+        className={clsx(
           "fixed inset-0 z-10 flex flex-col items-center justify-center gap-6",
           "bg-canvas/90 backdrop-blur-md transition-[translate] duration-300 md:hidden",
           isMenuOpen || "translate-x-full",
