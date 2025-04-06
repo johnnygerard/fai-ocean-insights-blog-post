@@ -14,7 +14,7 @@ const HomePage = () => {
   const articleSections = article.sections;
 
   return (
-    <div className="py-12">
+    <div className="py-6 md:py-8 lg:py-10 xl:py-12">
       <main>
         <article>
           <ArticleHeader
