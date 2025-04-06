@@ -9,7 +9,7 @@ import articleJson from "@data/article.json";
 import Image from "next/image";
 import { memo } from "react";
 
-const HomePage = async () => {
+const HomePage = () => {
   const article: ArticleJson = articleJson;
   const articleSections = article.sections;
 
