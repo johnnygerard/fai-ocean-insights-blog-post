@@ -12,7 +12,7 @@ type Props = {
 
 export const ArticleHeader = memo(({ className, date, tags, title }: Props) => {
   return (
-    <header className="mx-auto max-w-180 py-6">
+    <header className="tw_body_px mx-auto max-w-180 py-6">
       <hgroup>
         <p
           className={clsx(

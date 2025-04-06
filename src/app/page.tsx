@@ -29,7 +29,7 @@ const HomePage = () => {
             priority
           />
           <ArticleSection {...articleSections[0]} />
-          <div className="my-6 px-12">
+          <div className="tw_body_px my-6">
             <video
               src="/asset/video/coral-reefs.mp4"
               className="h-190 w-full rounded-2xl object-cover"
@@ -43,7 +43,7 @@ const HomePage = () => {
             />
           </div>
           <ArticleSection {...articleSections[1]} />
-          <div className="my-6 px-12">
+          <div className="tw_body_px my-6">
             <Image
               src={hydrothermalVent}
               alt="A vibrant underwater scene showcasing a hydrothermal vent surrounded by colorful tube worms and various fish species swimming nearby."
