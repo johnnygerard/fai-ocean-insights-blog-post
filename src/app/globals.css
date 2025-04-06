@@ -39,6 +39,30 @@
 
   --spacing: 0.25rem;
 
+  /* Related Article Date and Tags, Author Name and Title */
+  --text-label-2: clamp(0.75rem, 0.7321rem + 0.0893vw, 0.8125rem);
+  --text-label-2--line-height: 1rem;
+
+  /* Footer Navigation Links, Article Date and Tags, Button Labels */
+  --text-label-1: clamp(0.8125rem, 0.7768rem + 0.1786vw, 0.9375rem);
+  --text-label-1--line-height: clamp(1.125rem, 1.0893rem + 0.1786vw, 1.25rem);
+
+  /* Body */
+  --text-base: clamp(1rem, 0.9821rem + 0.0893vw, 1.0625rem);
+  --text-base--line-height: clamp(1.5rem, 1.4286rem + 0.3571vw, 1.75rem);
+
+  /* Subheading */
+  --text-h3: clamp(1.125rem, 1.0893rem + 0.1786vw, 1.25rem);
+  --text-h3--line-height: clamp(1.375rem, 1.3393rem + 0.1786vw, 1.5rem);
+
+  /* Heading Level 2 */
+  --text-h2: clamp(1.5rem, 1.4286rem + 0.3571vw, 1.75rem);
+  --text-h2--line-height: clamp(1.75rem, 1.6786rem + 0.3571vw, 2rem);
+
+  /* Heading Level 1 */
+  --text-h1: clamp(2rem, 1.7143rem + 1.4286vw, 3rem);
+  --text-h1--line-height: clamp(2.25rem, 1.9643rem + 1.4286vw, 3.25rem);
+
   @keyframes fadeIn {
     from {
       opacity: 0;
