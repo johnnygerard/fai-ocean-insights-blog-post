@@ -58,8 +58,7 @@ const RootLayout = ({ children }: Props) => {
     >
       <body
         className={cn(
-          "text-[1.0625rem]/[1.75rem] text-[#E4DAD7]",
-          "mx-auto max-w-480 bg-canvas",
+          "mx-auto max-w-480 bg-canvas text-base text-[#E4DAD7]",
           "flex min-h-screen flex-col",
         )}
       >

@@ -11,16 +11,14 @@ const NotFound = () => {
   return (
     <main className="grid flex-1 place-items-center px-4 sm:px-6 md:px-8">
       <div className="text-center">
-        <h1 className="mb-4 font-display text-[3rem]/[3.6rem] font-bold">
-          404 Not Found
-        </h1>
-        <p className="mb-6 text-[1.0625rem]/[1.75rem]">
+        <h1 className="mb-4 font-display text-h1 font-bold">404 Not Found</h1>
+        <p className="mb-6">
           Sorry, the page you are looking for does not exist.
         </p>
         <Link
           href="/"
           className={cn(
-            "text-[1.0625rem]/[1.75rem] font-medium text-accent",
+            "font-medium text-accent",
             "transition-[opacity] hover:opacity-80",
           )}
         >

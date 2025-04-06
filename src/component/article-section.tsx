@@ -18,21 +18,13 @@ export const ArticleSection = memo(({ className, heading, content }: Props) => {
     >
       <h2
         className={cn(
-          "font-display font-bold -tracking-[0.025rem] lg:-tracking-[0.035rem]",
-          "text-[1.25rem]/[1.5rem] sm:text-[1.5rem]/[1.75rem]",
-          "md:text-[1.625rem]/[1.875rem] lg:text-[1.75rem]/[2rem]",
+          "font-display text-h2 font-bold",
+          "-tracking-[0.025rem] lg:-tracking-[0.035rem]",
         )}
       >
         {heading}
       </h2>
-      <p
-        className={cn(
-          "mt-4 text-[0.9375rem]/[1.5rem] sm:mt-5 md:mt-6",
-          "sm:text-[1rem]/[1.625rem] md:text-[1.0625rem]/[1.75rem]",
-        )}
-      >
-        {content}
-      </p>
+      <p className="mt-4 text-base sm:mt-5 md:mt-6">{content}</p>
     </section>
   );
 });

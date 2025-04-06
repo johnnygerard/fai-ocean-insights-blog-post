@@ -15,7 +15,7 @@ export const RelatedArticles = memo(({ articles, className }: Props) => {
         <h2
           className={cn(
             "border-t-[1.5px] border-[#B6979133]",
-            "py-3 font-display text-[1.75rem]/[2rem] font-bold -tracking-[0.035rem] md:py-4",
+            "py-3 font-display text-h2 font-bold -tracking-[0.035rem] md:py-4",
           )}
         >
           Related Articles

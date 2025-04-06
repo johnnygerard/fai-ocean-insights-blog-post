@@ -19,7 +19,7 @@ export const Author = memo(({ avatarUrl, className, name, title }: Props) => {
         width={256}
         height={256}
       />
-      <div className="flex w-60 flex-col text-[0.8125rem]/[1rem]">
+      <div className="flex w-60 flex-col text-label-2">
         <span className="truncate font-semibold">{name}</span>
         <span className="truncate text-dim">{title}</span>
       </div>

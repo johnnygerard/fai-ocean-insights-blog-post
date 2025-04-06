@@ -17,7 +17,7 @@ export const FooterNavigationList = memo(
       <ul
         aria-label={header}
         className={cn(
-          "space-y-2 text-[0.9375rem]/[1.25rem] font-medium sm:w-40 xl:w-50",
+          "space-y-2 text-label-1 font-medium sm:w-40 xl:w-50",
           className,
         )}
       >
