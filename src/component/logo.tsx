@@ -21,7 +21,6 @@ export const Logo = memo(({ className }: Props) => {
         alt="OceanInsights"
         width={216}
         height={32}
-        priority
       />
     </Link>
   );
