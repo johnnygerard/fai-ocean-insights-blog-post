@@ -6,11 +6,11 @@ const nextConfig: NextConfig = {
     {
       source: "/:path*",
       headers: [
-        // Prevent search engines from indexing the website
-        // @see https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag#directives
         {
+          // Prevent search engines from following links on the homepage
+          // @see https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag#directives
           key: "x-robots-tag",
-          value: "none",
+          value: "nofollow",
         },
       ],
     },
