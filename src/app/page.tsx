@@ -32,6 +32,7 @@ const HomePage = () => {
             )}
             placeholder="blur"
             priority
+            sizes="100vw"
           />
           <ArticleSection {...articleSections[0]} />
           <div className="tw_body_px my-6">
@@ -60,6 +61,7 @@ const HomePage = () => {
                 "h-120 sm:h-132 md:h-144 lg:h-156",
               )}
               placeholder="blur"
+              sizes="100vw"
             />
           </div>
           <ArticleSection {...articleSections[2]} />

@@ -23,7 +23,10 @@ export const RelatedArticles = memo(({ articles, className }: Props) => {
         <ul className="grid gap-8 md:grid-cols-2 md:gap-6 xl:grid-cols-3">
           {articles.map((article) => (
             <li key={article.title}>
-              <ArticlePreview article={article} />
+              <ArticlePreview
+                article={article}
+                imageSizes="(min-width: 90em) 33vw, (min-width: 48em) 50vw, 100vw"
+              />
             </li>
           ))}
         </ul>

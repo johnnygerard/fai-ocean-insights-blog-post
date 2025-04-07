@@ -8,6 +8,7 @@ import { memo } from "react";
 type Props = {
   className?: string;
   article: ArticleJson["relatedArticles"][number];
+  imageSizes: string;
 };
 
 export const ArticlePreview = memo(
@@ -20,6 +21,7 @@ export const ArticlePreview = memo(
       date,
       slug,
     },
+    imageSizes,
   }: Props) => {
     return (
       <div className={className}>
@@ -27,6 +29,7 @@ export const ArticlePreview = memo(
           className="h-56 w-full rounded-lg object-cover"
           src={`/asset/image/article-preview/${name}`}
           alt={alt}
+          sizes={imageSizes}
           width={704}
           height={384}
         />

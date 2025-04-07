@@ -39,6 +39,7 @@ export const Gallery = memo(({ className }: Props) => {
           src={image.src}
           alt={image.alt}
           placeholder="blur"
+          sizes="(min-width: 48em) 33.75rem, 100vw"
           className={clsx(
             "h-105 w-full rounded-2xl object-cover",
             "md:absolute md:left-1/2 md:h-full md:w-135",
