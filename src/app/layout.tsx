@@ -25,7 +25,7 @@ const DESCRIPTION =
   "A fascinating journey into the mysteries of the ocean, uncovering the unknown and the beauty beneath the waves.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://placeholder.example.com"),
+  metadataBase: new URL("https://oceaninsights.jgerard.dev"),
   title: {
     template: `%s | ${APP_NAME}`,
     default: `${TITLE} | ${APP_NAME}`,
