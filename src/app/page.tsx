@@ -36,7 +36,10 @@ const HomePage = () => {
           <div className="tw_body_px my-6">
             <video
               src="/asset/video/coral-reefs.mp4"
-              className="h-190 w-full rounded-2xl object-cover"
+              className={clsx(
+                "w-full rounded-2xl object-cover max-md:object-left",
+                "aspect-square md:aspect-video",
+              )}
               width={1312}
               height={720}
               autoPlay
