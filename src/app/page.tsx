@@ -54,7 +54,10 @@ const HomePage = () => {
             <Image
               src={hydrothermalVent}
               alt="A vibrant underwater scene showcasing a hydrothermal vent surrounded by colorful tube worms and various fish species swimming nearby."
-              className="h-156 w-full rounded-lg object-cover"
+              className={clsx(
+                "w-full rounded-lg object-cover",
+                "h-120 sm:h-132 md:h-144 lg:h-156",
+              )}
             />
           </div>
           <ArticleSection {...articleSections[2]} />
