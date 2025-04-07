@@ -26,7 +26,13 @@ const images = [
 
 export const Gallery = memo(({ className }: Props) => {
   return (
-    <div className={clsx("relative my-12 h-105 overflow-hidden", className)}>
+    <div
+      className={clsx(
+        "tw_body_px my-12 flex flex-col gap-4 sm:gap-8",
+        "md:relative md:h-105 md:overflow-hidden",
+        className,
+      )}
+    >
       {images.map((image, index) => (
         <Image
           key={image.alt}
@@ -35,11 +41,12 @@ export const Gallery = memo(({ className }: Props) => {
           width={576}
           height={448}
           className={clsx(
-            "absolute left-1/2 h-full w-135 rounded-2xl object-cover",
+            "h-105 w-full rounded-2xl object-cover",
+            "md:absolute md:left-1/2 md:h-full md:w-135",
             [
-              "-translate-x-[calc(150%+3rem)]",
-              "-translate-x-[calc(50%)]",
-              "translate-x-[calc(50%+3rem)]",
+              "md:-translate-x-[calc(150%+3rem)]",
+              "md:-translate-x-[calc(50%)]",
+              "md:translate-x-[calc(50%+3rem)]",
             ][index],
           )}
         />
