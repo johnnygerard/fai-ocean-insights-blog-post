@@ -1,6 +1,5 @@
 import { Footer } from "@/component/footer";
 import { Header } from "@/component/header";
-import { Noscript } from "@/component/noscript";
 import { clsx } from "clsx";
 import type { Metadata, Viewport } from "next";
 import { Domine, Outfit } from "next/font/google";
@@ -69,7 +68,6 @@ const RootLayout = ({ children }: Props) => {
         <Header />
         {children}
         <Footer className="mt-24" />
-        <Noscript />
       </body>
     </html>
   );
