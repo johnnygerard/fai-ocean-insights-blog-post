@@ -6,6 +6,7 @@ import { Gallery } from "@/component/gallery";
 import { RelatedArticles } from "@/component/related-articles";
 import { ArticleJson } from "@/type/article-json";
 import articleJson from "@data/article.json";
+import { clsx } from "clsx";
 import Image from "next/image";
 import { memo } from "react";
 
@@ -23,7 +24,10 @@ const HomePage = () => {
             title="Exploring the Depths of the Ocean"
           />
           <Image
-            className="my-6 h-220 w-full object-cover"
+            className={clsx(
+              "my-6 w-full object-cover max-md:object-left",
+              "h-120 sm:h-160 md:h-180 lg:h-220",
+            )}
             src={hero}
             alt="A vibrant coral reef teeming with colorful fish and marine life under clear blue water."
             priority
