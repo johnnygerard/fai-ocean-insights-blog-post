@@ -24,12 +24,12 @@ const HomePage = () => {
             title="Exploring the Depths of the Ocean"
           />
           <Image
+            src={hero}
+            alt="A vibrant coral reef teeming with colorful fish and marine life under clear blue water."
             className={clsx(
               "my-6 w-full object-cover max-md:object-left",
               "h-120 sm:h-160 md:h-180 lg:h-220",
             )}
-            src={hero}
-            alt="A vibrant coral reef teeming with colorful fish and marine life under clear blue water."
             priority
           />
           <ArticleSection {...articleSections[0]} />
