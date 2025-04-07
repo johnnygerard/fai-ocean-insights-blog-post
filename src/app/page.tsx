@@ -30,6 +30,7 @@ const HomePage = () => {
               "my-6 w-full object-cover max-md:object-left",
               "h-120 sm:h-160 md:h-180 lg:h-220",
             )}
+            placeholder="blur"
             priority
           />
           <ArticleSection {...articleSections[0]} />
@@ -58,6 +59,7 @@ const HomePage = () => {
                 "w-full rounded-lg object-cover",
                 "h-120 sm:h-132 md:h-144 lg:h-156",
               )}
+              placeholder="blur"
             />
           </div>
           <ArticleSection {...articleSections[2]} />
