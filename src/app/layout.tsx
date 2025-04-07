@@ -1,8 +1,7 @@
 import { Footer } from "@/component/footer";
 import { Header } from "@/component/header";
-import { Noscript } from "@/component/noscript";
-import { cn } from "@/util/cn";
-import type { Metadata } from "next";
+import { clsx } from "clsx";
+import type { Metadata, Viewport } from "next";
 import { Domine, Outfit } from "next/font/google";
 import "./globals.css";
 import { memo, ReactNode } from "react";
@@ -25,7 +24,7 @@ const DESCRIPTION =
   "A fascinating journey into the mysteries of the ocean, uncovering the unknown and the beauty beneath the waves.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://placeholder.example.com"),
+  metadataBase: new URL("https://oceaninsights.jgerard.dev"),
   title: {
     template: `%s | ${APP_NAME}`,
     default: `${TITLE} | ${APP_NAME}`,
@@ -40,6 +39,12 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 type Props = {
   children: ReactNode;
 };
@@ -47,20 +52,22 @@ type Props = {
 const RootLayout = ({ children }: Props) => {
   return (
     <html
-      className={cn(outfit.variable, domine.variable, "font-sans antialiased")}
+      className={clsx(
+        outfit.variable,
+        domine.variable,
+        "font-sans antialiased",
+      )}
       lang="en-US"
     >
       <body
-        className={cn(
-          "text-[1.0625rem]/[1.75rem] text-[#E4DAD7]",
-          "mx-auto max-w-480 bg-[#0D0402]",
+        className={clsx(
+          "mx-auto max-w-480 bg-canvas text-base text-[#E4DAD7]",
           "flex min-h-screen flex-col",
         )}
       >
         <Header />
         {children}
         <Footer className="mt-24" />
-        <Noscript />
       </body>
     </html>
   );

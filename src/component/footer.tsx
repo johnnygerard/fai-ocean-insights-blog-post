@@ -1,7 +1,9 @@
+import { FooterNavigationList } from "@/component/footer-navigation-list";
 import { Logo } from "@/component/logo";
-import { NavigationList } from "@/component/navigation-list";
 import { SocialMediaLinks } from "@/component/social-media-links";
-import { cn } from "@/util/cn";
+import { FooterNavigation } from "@/type/footer-navigation";
+import footerNavigation from "@data/footer-navigation.json";
+import { clsx } from "clsx";
 import { memo } from "react";
 
 type Props = {
@@ -9,64 +11,42 @@ type Props = {
 };
 
 export const Footer = memo(({ className }: Props) => {
+  const navigation: FooterNavigation = footerNavigation;
+
   return (
-    <footer className={cn("border-t border-[#B6979133] p-12 pt-6", className)}>
-      <nav className="flex gap-12" aria-label="Footer">
-        <div className="flex flex-1 flex-col items-start justify-between">
+    <footer
+      className={clsx(
+        "border-t border-[#B6979133]",
+        "tw_body_px py-4 sm:pt-4 sm:pb-6 md:pt-4 md:pb-8 lg:pt-6 lg:pb-12",
+        className,
+      )}
+    >
+      <nav
+        className="flex flex-col gap-8 sm:gap-10 md:gap-12 lg:flex-row lg:justify-between"
+        aria-label="Footer"
+      >
+        <div
+          className={clsx(
+            "flex flex-col items-center justify-between gap-4",
+            "sm:flex-row md:flex-col md:items-start",
+          )}
+        >
           <Logo />
           <SocialMediaLinks />
         </div>
-        <NavigationList
-          header="Explore"
-          links={[
-            {
-              href: "/explore/deep-sea",
-              text: "Deep Sea",
-            },
-            {
-              href: "/explore/marine-life",
-              text: "Marine Life",
-            },
-            {
-              href: "/explore/coral-reefs",
-              text: "Coral Reefs",
-            },
-          ]}
-        />
-        <NavigationList
-          header="Conservation"
-          links={[
-            {
-              href: "/conservation/initiatives",
-              text: "Initiatives",
-            },
-            {
-              href: "/conservation/research",
-              text: "Research",
-            },
-            {
-              href: "/conservation/get-involved",
-              text: "Get Involved",
-            },
-          ]}
-        />
-        <NavigationList
-          header="About Us"
-          links={[
-            {
-              href: "/about/our-mission",
-              text: "Our Mission",
-            },
-            {
-              href: "/about/team",
-              text: "Team",
-            },
-            {
-              href: "/about/contact",
-              text: "Contact",
-            },
-          ]}
-        />
+
+        <ul
+          className={clsx(
+            "flex flex-wrap justify-between gap-8 sm:gap-10 md:gap-12",
+            "max-sm:flex-col max-sm:items-center max-sm:text-center",
+          )}
+        >
+          {navigation.map((navigationList) => (
+            <li key={navigationList.header}>
+              <FooterNavigationList {...navigationList} />
+            </li>
+          ))}
+        </ul>
       </nav>
     </footer>
   );

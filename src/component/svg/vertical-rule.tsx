@@ -1,4 +1,4 @@
-import { cn } from "@/util/cn";
+import { clsx } from "clsx";
 import { memo } from "react";
 
 type Props = {
@@ -8,8 +8,9 @@ type Props = {
 export const VerticalRule = memo(({ className }: Props) => {
   return (
     <svg
-      aria-hidden
-      className={cn("h-8 w-0.5", className)}
+      role="separator"
+      aria-orientation="vertical"
+      className={clsx("h-8 w-0.5", className)}
       viewBox="0 0 2 32"
       fill="none"
     >

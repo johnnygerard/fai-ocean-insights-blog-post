@@ -6,15 +6,16 @@ import { Gallery } from "@/component/gallery";
 import { RelatedArticles } from "@/component/related-articles";
 import { ArticleJson } from "@/type/article-json";
 import articleJson from "@data/article.json";
+import { clsx } from "clsx";
 import Image from "next/image";
 import { memo } from "react";
 
-const HomePage = async () => {
+const HomePage = () => {
   const article: ArticleJson = articleJson;
   const articleSections = article.sections;
 
   return (
-    <div className="py-12">
+    <div className="py-6 md:py-8 lg:py-10 xl:py-12">
       <main>
         <article>
           <ArticleHeader
@@ -23,16 +24,24 @@ const HomePage = async () => {
             title="Exploring the Depths of the Ocean"
           />
           <Image
-            className="my-6 h-220 w-full object-cover"
             src={hero}
             alt="A vibrant coral reef teeming with colorful fish and marine life under clear blue water."
+            className={clsx(
+              "my-6 w-full object-cover max-md:object-left",
+              "h-120 sm:h-160 md:h-180 lg:h-220",
+            )}
+            placeholder="blur"
             priority
+            sizes="100vw"
           />
           <ArticleSection {...articleSections[0]} />
-          <div className="my-6 px-12">
+          <div className="tw_body_px my-6">
             <video
               src="/asset/video/coral-reefs.mp4"
-              className="h-190 w-full rounded-2xl object-cover"
+              className={clsx(
+                "w-full rounded-2xl object-cover max-md:object-left",
+                "aspect-square md:aspect-video",
+              )}
               width={1312}
               height={720}
               autoPlay
@@ -43,11 +52,16 @@ const HomePage = async () => {
             />
           </div>
           <ArticleSection {...articleSections[1]} />
-          <div className="my-6 px-12">
+          <div className="tw_body_px my-6">
             <Image
               src={hydrothermalVent}
               alt="A vibrant underwater scene showcasing a hydrothermal vent surrounded by colorful tube worms and various fish species swimming nearby."
-              className="h-156 w-full rounded-lg object-cover"
+              className={clsx(
+                "w-full rounded-lg object-cover",
+                "h-120 sm:h-132 md:h-144 lg:h-156",
+              )}
+              placeholder="blur"
+              sizes="100vw"
             />
           </div>
           <ArticleSection {...articleSections[2]} />
