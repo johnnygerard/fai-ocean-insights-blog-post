@@ -4,17 +4,17 @@ import { memo } from "react";
 
 type Props = {
   className?: string;
-  avatarUrl: string;
+  headshotUrl: string;
   name: string;
   title: string;
 };
 
-export const Author = memo(({ avatarUrl, className, name, title }: Props) => {
+export const Author = memo(({ headshotUrl, className, name, title }: Props) => {
   return (
     <div className={clsx("flex items-center gap-3", className)}>
       <Image
         className="size-9"
-        src={avatarUrl}
+        src={headshotUrl}
         alt=""
         width={256}
         height={256}
