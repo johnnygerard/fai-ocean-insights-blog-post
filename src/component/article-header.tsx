@@ -32,7 +32,7 @@ export const ArticleHeader = memo(({ className, date, tags, title }: Props) => {
       </hgroup>
       <Author
         className="mt-6"
-        avatarUrl="/asset/image/avatar.png"
+        headshotUrl="/asset/image/headshot.png"
         name="Jason Bialis"
         title="Product Designer"
       />
