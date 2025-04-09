@@ -1,3 +1,4 @@
+import { BackToTop } from "@/component/back-to-top";
 import { Footer } from "@/component/footer";
 import { Header } from "@/component/header";
 import { clsx } from "clsx";
@@ -55,7 +56,7 @@ const RootLayout = ({ children }: Props) => {
       className={clsx(
         outfit.variable,
         domine.variable,
-        "font-sans antialiased",
+        "scroll-smooth font-sans antialiased",
       )}
       lang="en-US"
     >
@@ -68,6 +69,7 @@ const RootLayout = ({ children }: Props) => {
         <Header />
         {children}
         <Footer className="mt-24" />
+        <BackToTop />
       </body>
     </html>
   );
