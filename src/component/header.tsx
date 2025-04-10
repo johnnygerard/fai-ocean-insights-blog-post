@@ -13,12 +13,12 @@ export const Header = memo(({ className }: Props) => {
   return (
     <header
       className={clsx(
-        "top-0 z-10 bg-canvas/90 max-md:sticky",
+        "top-0 z-100 bg-canvas/90 max-md:sticky",
         "tw_body_px flex items-center justify-between py-4",
         className,
       )}
     >
-      <Logo className="z-20" />
+      <Logo className="z-200" />
       <HeaderMenu>
         <Button variant="text">Download app</Button>
         <VerticalRule className="max-md:hidden" />
