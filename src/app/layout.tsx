@@ -1,6 +1,6 @@
-import { BackToTop } from "@/component/back-to-top";
 import { Footer } from "@/component/footer";
 import { Header } from "@/component/header";
+import { ScrollToTop } from "@/component/scroll-to-top";
 import { clsx } from "clsx";
 import type { Metadata, Viewport } from "next";
 import { Domine, Outfit } from "next/font/google";
@@ -74,7 +74,7 @@ const RootLayout = ({ children }: Props) => {
           className="absolute top-full"
           id="scroll-to-top-sentinel"
         />
-        <BackToTop />
+        <ScrollToTop />
       </body>
     </html>
   );

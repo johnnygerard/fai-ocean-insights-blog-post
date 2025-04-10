@@ -6,7 +6,7 @@ type Props = {
   className?: string;
 };
 
-export const BackToTop = memo(({ className }: Props) => {
+export const ScrollToTop = memo(({ className }: Props) => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -56,4 +56,4 @@ export const BackToTop = memo(({ className }: Props) => {
   );
 });
 
-BackToTop.displayName = "BackToTop";
+ScrollToTop.displayName = "ScrollToTop";
