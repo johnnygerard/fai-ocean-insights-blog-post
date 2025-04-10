@@ -83,6 +83,5 @@
       opacity: 0;
     }
   }
-  --animate-fade-in: fadeIn var(--default-transition-duration)
-    var(--default-transition-timing-function);
+  --animate-fade-in: fadeIn 300ms var(--default-transition-timing-function);
 }

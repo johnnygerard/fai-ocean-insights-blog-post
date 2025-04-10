@@ -10,7 +10,7 @@ export const ScrollToTop = memo(() => {
   const className = clsx(
     "fixed right-4 bottom-4 z-50 rounded-full bg-amber-400 p-3",
     "transition-[background-color] duration-300 hover:bg-amber-300",
-    "shadow-[0_0_15px_rgba(251,191,36,0.5)]",
+    "shadow-[0_0_15px_rgba(251,191,36,0.5)] animate-fade-in",
   );
 
   useEffect(() => {
