@@ -69,11 +69,6 @@ const RootLayout = ({ children }: Props) => {
         <Header />
         {children}
         <Footer className="mt-24" />
-        <div
-          aria-hidden
-          className="absolute top-full"
-          id="scroll-to-top-sentinel"
-        />
         <ScrollToTop />
       </body>
     </html>

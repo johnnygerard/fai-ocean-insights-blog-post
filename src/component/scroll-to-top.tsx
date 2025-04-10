@@ -28,6 +28,11 @@ export const ScrollToTop = memo(() => {
 
   return (
     <>
+      <div
+        aria-hidden
+        className="absolute top-full"
+        id="scroll-to-top-sentinel"
+      />
       {visible && (
         <button
           aria-label={ariaLabel}
