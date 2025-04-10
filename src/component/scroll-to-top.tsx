@@ -1,10 +1,11 @@
 "use client";
 import { ChevronUp } from "@/component/svg/chevron-up";
 import { clsx } from "clsx";
-import { memo, useEffect, useState } from "react";
+import { memo, useEffect, useRef, useState } from "react";
 
 export const ScrollToTop = memo(() => {
   const [visible, setVisible] = useState(false);
+  const sentinelRef = useRef<HTMLDivElement>(null);
   const ariaLabel = "Back to top";
   const className = clsx(
     "fixed right-4 bottom-4 z-50 rounded-full bg-amber-400 p-3",
@@ -17,8 +18,7 @@ export const ScrollToTop = memo(() => {
       setVisible(!entry.isIntersecting);
     });
 
-    const sentinel = document.querySelector("#scroll-to-top-sentinel");
-    if (sentinel === null) throw new Error("Sentinel not found");
+    const sentinel = sentinelRef.current!;
     observer.observe(sentinel);
 
     return () => {
@@ -28,11 +28,7 @@ export const ScrollToTop = memo(() => {
 
   return (
     <>
-      <div
-        aria-hidden
-        className="absolute top-full"
-        id="scroll-to-top-sentinel"
-      />
+      <div aria-hidden className="absolute top-full" ref={sentinelRef} />
       {visible && (
         <button
           aria-label={ariaLabel}
