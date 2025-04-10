@@ -1,5 +1,6 @@
 import { Footer } from "@/component/footer";
 import { Header } from "@/component/header";
+import { ScrollToTop } from "@/component/scroll-to-top";
 import { clsx } from "clsx";
 import type { Metadata, Viewport } from "next";
 import { Domine, Outfit } from "next/font/google";
@@ -55,7 +56,7 @@ const RootLayout = ({ children }: Props) => {
       className={clsx(
         outfit.variable,
         domine.variable,
-        "font-sans antialiased",
+        "scroll-smooth font-sans antialiased",
       )}
       lang="en-US"
     >
@@ -68,6 +69,7 @@ const RootLayout = ({ children }: Props) => {
         <Header />
         {children}
         <Footer className="mt-24" />
+        <ScrollToTop />
       </body>
     </html>
   );
