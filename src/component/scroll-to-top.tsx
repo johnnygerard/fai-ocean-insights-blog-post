@@ -1,13 +1,16 @@
 "use client";
+import { ChevronUp } from "@/component/svg/chevron-up";
 import { clsx } from "clsx";
 import { memo, useEffect, useState } from "react";
 
-type Props = {
-  className?: string;
-};
-
-export const ScrollToTop = memo(({ className }: Props) => {
+export const ScrollToTop = memo(() => {
   const [visible, setVisible] = useState(false);
+  const ariaLabel = "Back to top";
+  const className = clsx(
+    "fixed right-4 bottom-4 z-50 rounded-full bg-amber-400 p-3",
+    "transition-[background-color] duration-300 hover:bg-amber-300",
+    "shadow-[0_0_15px_rgba(251,191,36,0.5)]",
+  );
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
@@ -24,35 +27,23 @@ export const ScrollToTop = memo(({ className }: Props) => {
   }, []);
 
   return (
-    visible && (
-      <button
-        aria-label="Back to top"
-        type="button"
-        onClick={() => window.scrollTo({ top: 0 })}
-        className={clsx(
-          "fixed right-4 bottom-4 z-50 rounded-full bg-amber-400 p-3",
-          "transition-[background-color] duration-300 hover:bg-amber-300",
-          "shadow-[0_0_15px_rgba(251,191,36,0.5)]",
-          className,
-        )}
-      >
-        {/* Chevron Up Icon */}
-        <svg
-          aria-hidden
-          className="size-4"
-          fill="none"
-          stroke="black"
-          viewBox="0 0 24 24"
+    <>
+      {visible && (
+        <button
+          aria-label={ariaLabel}
+          className={className}
+          onClick={() => window.scrollTo({ top: 0 })}
+          type="button"
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M5 15l7-7 7 7"
-          />
-        </svg>
-      </button>
-    )
+          <ChevronUp />
+        </button>
+      )}
+      <noscript>
+        <a aria-label={ariaLabel} className={className} href="#">
+          <ChevronUp />
+        </a>
+      </noscript>
+    </>
   );
 });
 
