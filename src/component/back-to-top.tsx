@@ -10,15 +10,17 @@ export const BackToTop = memo(({ className }: Props) => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const SCROLL_THRESHOLD = window.innerHeight;
+    const observer = new IntersectionObserver(([entry]) => {
+      setVisible(!entry.isIntersecting);
+    });
 
-    const handleScroll = () => {
-      setVisible(window.scrollY > SCROLL_THRESHOLD);
+    const sentinel = document.querySelector("#scroll-to-top-sentinel");
+    if (sentinel === null) throw new Error("Sentinel not found");
+    observer.observe(sentinel);
+
+    return () => {
+      observer.unobserve(sentinel);
     };
-
-    setVisible(window.scrollY > SCROLL_THRESHOLD);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
