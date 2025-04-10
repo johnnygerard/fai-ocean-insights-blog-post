@@ -15,7 +15,7 @@ export const HeaderMenu = memo(({ children }: Props) => {
       <button
         aria-controls="menu-sidebar"
         aria-expanded={isMenuOpen}
-        className="z-20 md:hidden"
+        className="z-200 md:hidden"
         onClick={() => setIsMenuOpen((value) => !value)}
         title={`${isMenuOpen ? "Close" : "Open"} Menu`}
         type="button"
@@ -34,7 +34,7 @@ export const HeaderMenu = memo(({ children }: Props) => {
       <div
         id="menu-sidebar"
         className={clsx(
-          "fixed inset-0 z-10 flex flex-col items-center justify-center gap-6",
+          "fixed inset-0 z-100 flex flex-col items-center justify-center gap-6",
           "bg-canvas/90 backdrop-blur-md transition-[translate] duration-300 md:hidden",
           isMenuOpen || "translate-x-full",
         )}
