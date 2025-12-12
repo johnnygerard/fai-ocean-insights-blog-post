@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@layer base {
+  button:enabled,
+  [role="button"]:enabled {
+    cursor: pointer;
+  }
+
+  :is(a, button, input, textarea):focus-visible {
+    outline: transparent solid 0;
+    outline-offset: 0;
+  }
+}
+
+@media screen and (update: fast) and (prefers-reduced-motion: no-preference) {
+  :root {
+    @apply scroll-smooth;
+  }
+}
+
+@media not (update: fast) {
+  * {
+    @apply animate-none! transition-none!;
+  }
+}
+
+/* `@theme inline` is required when referencing CSS custom properties */
+/* @see https://tailwindcss.com/docs/theme#referencing-other-variables */
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+}
+
+@theme {
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  }
+}
