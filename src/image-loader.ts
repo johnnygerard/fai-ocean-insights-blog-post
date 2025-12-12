@@ -1,7 +1,7 @@
 "use client";
 import type { ImageLoader } from "next/image";
 
-const BASE_URL = "https://ik.imagekit.io/jgerard/";
+const BASE_URL = "https://ik.imagekit.io/jgerard/fai-ocean-insights-blog-post/";
 /**
  * Custom ImageKit loader for Next.js Image component.
  *
