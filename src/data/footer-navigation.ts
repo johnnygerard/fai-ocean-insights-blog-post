@@ -1,12 +1,12 @@
-type footerNavigationLink = {
-  href: string;
-  text: string;
+export type FooterNavigation = {
+  header: string;
+  links: Array<{
+    href: string;
+    text: string;
+  }>;
 };
 
-export const footerNavigation: Array<{
-  header: string;
-  links: footerNavigationLink[];
-}> = [
+export const footerNavigation: FooterNavigation[] = [
   {
     header: "Explore",
     links: [
