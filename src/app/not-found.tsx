@@ -3,21 +3,34 @@ import Link from "next/link";
 import type { FC } from "react";
 
 export const metadata: Metadata = {
-  title: "Page Not Found",
+  title: "404 Not Found",
 };
 
 const NotFound: FC = () => {
   return (
-    <div className="grid min-h-screen place-items-center">
+    <main className="tw_body_px grid flex-1 place-items-center">
       <div className="text-center">
-        <hgroup>
-          <p>404</p>
-          <h1>Page Not Found</h1>
-        </hgroup>
-        <p>Sorry, the page you are looking for does not exist.</p>
-        <Link href="/">Back to Home</Link>
+        <h1 className="font-display text-h1 mb-4 font-bold">404 Not Found</h1>
+        <p className="mb-6">
+          Sorry, the page you are looking for does not exist.
+          <br />
+          This single-page demo website is part of my{" "}
+          <a
+            href="https://www.jgerard.dev/"
+            className="text-accent font-medium transition-opacity hover:opacity-80"
+          >
+            portfolio
+          </a>
+          .
+        </p>
+        <Link
+          href="/"
+          className="text-accent font-medium transition-opacity hover:opacity-80"
+        >
+          Back to Home
+        </Link>
       </div>
-    </div>
+    </main>
   );
 };
 
