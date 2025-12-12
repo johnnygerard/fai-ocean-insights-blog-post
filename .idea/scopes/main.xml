@@ -1,3 +1,0 @@
-<component name="DependencyValidationManager">
-  <scope name="main" pattern="file[starter-nextjs-15]:*/&amp;&amp;!file:package-lock.json&amp;&amp;!file[starter-nextjs-15]:public/asset/image//*" />
-</component>
