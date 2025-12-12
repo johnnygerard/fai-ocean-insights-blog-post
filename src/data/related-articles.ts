@@ -1,4 +1,4 @@
-export const relatedArticles: Array<{
+export type RelatedArticle = {
   image: {
     name: string;
     alt: string;
@@ -7,7 +7,9 @@ export const relatedArticles: Array<{
   tags: string[];
   date: string;
   slug: string;
-}> = [
+};
+
+export const relatedArticles: RelatedArticle[] = [
   {
     image: {
       name: "the-secrets-of-coral-reefs.png",
