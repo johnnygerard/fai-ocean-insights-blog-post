@@ -4,16 +4,15 @@ import type { FC } from "react";
 
 type Props = {
   className?: string;
-  headshotUrl: string;
   name: string;
   title: string;
 };
 
-export const Author: FC<Props> = ({ headshotUrl, className, name, title }) => (
+export const Author: FC<Props> = ({ className, name, title }) => (
   <div className={clsx("flex items-center gap-3", className)}>
     <Image
       className="size-9"
-      src={headshotUrl}
+      src="headshot.png"
       alt=""
       width={256}
       height={256}

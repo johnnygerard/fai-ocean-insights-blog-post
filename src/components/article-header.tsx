@@ -29,12 +29,7 @@ export const ArticleHeader: FC<Props> = ({ className, date, tags, title }) => (
         unknown and the beauty beneath the waves.
       </p>
     </hgroup>
-    <Author
-      className="mt-6"
-      headshotUrl="/asset/image/headshot.png"
-      name="Jason Bialis"
-      title="Product Designer"
-    />
+    <Author className="mt-6" name="Jason Bialis" title="Product Designer" />
     <time className="mt-4 inline-block text-label-1" dateTime={date}>
       {formatDate(date)}
     </time>
