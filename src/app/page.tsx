@@ -24,9 +24,10 @@ const HomePage: FC = () => (
             "my-6 w-full object-cover max-md:object-left",
             "h-120 sm:h-160 md:h-180 lg:h-220",
           )}
-          placeholder="blur"
           priority
           sizes="100vw"
+          width={1408}
+          height={768}
         />
         <ArticleSection {...blogPostSections[0]} />
         <div className="tw_body_px my-6">
@@ -54,7 +55,8 @@ const HomePage: FC = () => (
               "w-full rounded-lg object-cover",
               "h-120 sm:h-132 md:h-144 lg:h-156",
             )}
-            placeholder="blur"
+            width={1408}
+            height={640}
             sizes="100vw"
           />
         </div>

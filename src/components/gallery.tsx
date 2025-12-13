@@ -34,7 +34,8 @@ export const Gallery: FC<Props> = ({ className }) => (
         key={src}
         src={src}
         alt={alt}
-        placeholder="blur"
+        width={576}
+        height={448}
         sizes="(min-width: 48em) 33.75rem, 100vw"
         className={clsx(
           "h-105 w-full rounded-2xl object-cover",

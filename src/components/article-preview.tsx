@@ -25,7 +25,7 @@ export const ArticlePreview: FC<Props> = ({
   <div className={className}>
     <Image
       className="h-56 w-full rounded-lg object-cover"
-      src={`/asset/image/article-preview/${name}`}
+      src={`article-preview/${name}`}
       alt={alt}
       sizes={imageSizes}
       width={704}
