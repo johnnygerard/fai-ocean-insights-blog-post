@@ -31,7 +31,7 @@ const HomePage: FC = () => (
         <ArticleSection {...blogPostSections[0]} />
         <div className="tw_body_px my-6">
           <video
-            src="/asset/video/coral-reefs.mp4"
+            src="/assets/videos/coral-reefs.mp4"
             className={clsx(
               "w-full rounded-2xl object-cover max-md:object-left",
               "aspect-square md:aspect-video",
