@@ -12,7 +12,7 @@ type Props = {
 export const Header: FC<Props> = ({ className }) => (
   <header
     className={clsx(
-      "bg-canvas/90 top-0 z-100 max-md:sticky",
+      "top-0 z-100 bg-canvas/90 max-md:sticky",
       "tw_body_px flex items-center justify-between py-4",
       className,
     )}

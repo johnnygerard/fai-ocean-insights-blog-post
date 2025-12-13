@@ -18,9 +18,9 @@ export const Author: FC<Props> = ({ headshotUrl, className, name, title }) => (
       width={256}
       height={256}
     />
-    <div className="text-label-2 flex w-60 flex-col">
+    <div className="flex w-60 flex-col text-label-2">
       <span className="truncate font-semibold">{name}</span>
-      <span className="text-dim truncate">{title}</span>
+      <span className="truncate text-dim">{title}</span>
     </div>
   </div>
 );

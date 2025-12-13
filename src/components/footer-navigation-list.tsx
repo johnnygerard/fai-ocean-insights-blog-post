@@ -15,7 +15,7 @@ export const FooterNavigationList: FC<Props> = ({
   <ul
     aria-label={header}
     className={clsx(
-      "text-label-1 space-y-2 font-medium sm:w-40 xl:w-50",
+      "space-y-2 text-label-1 font-medium sm:w-40 xl:w-50",
       className,
     )}
   >

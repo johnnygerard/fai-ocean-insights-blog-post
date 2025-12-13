@@ -42,10 +42,10 @@ export const ArticlePreview: FC<Props> = ({
       >
         {title}
       </Link>
-      <p className="text-label-2 text-accent truncate font-medium">
+      <p className="truncate text-label-2 font-medium text-accent">
         {tags.join(", ")}
       </p>
-      <p className="text-label-2 text-dim truncate">
+      <p className="truncate text-label-2 text-dim">
         <time dateTime={date}>{formatDate(date)}</time>
       </p>
     </div>

@@ -15,13 +15,13 @@ export const ArticleHeader: FC<Props> = ({ className, date, tags, title }) => (
     <hgroup>
       <p
         className={clsx(
-          "text-label-1 text-accent truncate font-medium",
+          "truncate text-label-1 font-medium text-accent",
           className,
         )}
       >
         {typeof tags === "string" ? tags : tags.join(", ")}
       </p>
-      <h1 className="font-display text-h1 my-6 font-bold -tracking-[0.06rem]">
+      <h1 className="my-6 font-display text-h1 font-bold -tracking-[0.06rem]">
         {title}
       </h1>
       <p className="text-h3">
@@ -35,7 +35,7 @@ export const ArticleHeader: FC<Props> = ({ className, date, tags, title }) => (
       name="Jason Bialis"
       title="Product Designer"
     />
-    <time className="text-label-1 mt-4 inline-block" dateTime={date}>
+    <time className="mt-4 inline-block text-label-1" dateTime={date}>
       {formatDate(date)}
     </time>
   </header>

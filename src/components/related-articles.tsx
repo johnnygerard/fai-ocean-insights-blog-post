@@ -14,7 +14,7 @@ export const RelatedArticles: FC<Props> = ({ articles, className }) => (
       <h2
         className={clsx(
           "border-t-[1.5px] border-[#B6979133]",
-          "font-display text-h2 py-3 font-bold -tracking-[0.035rem] md:py-4",
+          "py-3 font-display text-h2 font-bold -tracking-[0.035rem] md:py-4",
         )}
       >
         Related Articles
