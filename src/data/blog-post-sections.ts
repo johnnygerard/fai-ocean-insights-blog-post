@@ -1,7 +1,4 @@
-export const blogPostSections: Array<{
-  heading: string;
-  content: string;
-}> = [
+export const blogPostSections = [
   {
     heading: "The Unexplored Frontier",
     content:
@@ -22,4 +19,7 @@ export const blogPostSections: Array<{
     content:
       "As we continue to explore the ocean, we are reminded of its beauty and importance. The ocean is not just a source of life but also a source of inspiration and wonder. Its vastness and mystery captivate the imagination, urging us to learn more and protect what is precious. Through exploration and conservation, we can ensure that future generations will have the opportunity to experience the ocean's wonders. Let us celebrate the ocean and commit to preserving its beauty and diversity for years to come.",
   },
-];
+] as const satisfies Array<{
+  heading: string;
+  content: string;
+}>;
