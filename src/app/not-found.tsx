@@ -18,6 +18,8 @@ const NotFound: FC = () => {
           <a
             href="https://www.jgerard.dev/"
             className="font-medium text-accent transition-opacity hover:opacity-80"
+            rel="external noopener noreferrer"
+            target="_blank"
           >
             portfolio
           </a>

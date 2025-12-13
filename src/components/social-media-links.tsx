@@ -20,7 +20,12 @@ export const SocialMediaLinks: FC<Props> = ({ className }) => (
       { Logo: LogoX, href: "https://x.com/x" },
     ].map(({ Logo, href }, index) => (
       <li key={index}>
-        <Link className="transition-opacity hover:opacity-80" href={href}>
+        <Link
+          className="transition-opacity hover:opacity-80"
+          href={href}
+          rel="external noopener noreferrer"
+          target="_blank"
+        >
           <Logo className="size-6" />
         </Link>
       </li>
