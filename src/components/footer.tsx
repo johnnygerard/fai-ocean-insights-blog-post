@@ -37,9 +37,9 @@ export const Footer: FC<Props> = ({ className }) => (
           "max-sm:flex-col max-sm:items-center max-sm:text-center",
         )}
       >
-        {footerNavigation.map((navigationList) => (
-          <li key={navigationList.header}>
-            <FooterNavigationList {...navigationList} />
+        {footerNavigation.map((navigation) => (
+          <li key={navigation.header}>
+            <FooterNavigationList navigation={navigation} />
           </li>
         ))}
       </ul>
