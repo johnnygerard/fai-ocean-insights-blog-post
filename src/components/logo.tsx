@@ -16,10 +16,12 @@ export const Logo: FC<Props> = ({ className }) => (
     href="/"
   >
     <Image
-      src="/asset/image/logo.svg"
+      src="/assets/images/logo.svg"
       alt="OceanInsights"
       width={216}
       height={32}
+      priority
+      unoptimized
     />
   </Link>
 );
