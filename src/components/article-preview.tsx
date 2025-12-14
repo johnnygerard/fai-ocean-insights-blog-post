@@ -41,6 +41,7 @@ export const ArticlePreview: FC<Props> = ({
           "hover:decoration-current hover:opacity-80",
         )}
         href={`/article/${slug}`}
+        prefetch={false}
       >
         {title}
       </Link>
