@@ -14,6 +14,7 @@ export const Author: FC<Props> = ({ className, name, title }) => (
       className="size-9"
       src="headshot.png"
       alt=""
+      loading="eager"
       width={256}
       height={256}
     />
