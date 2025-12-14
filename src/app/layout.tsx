@@ -20,7 +20,7 @@ const domine = Domine({
 });
 
 const APP_NAME = "OceanInsights";
-const TITLE = "Exploring the Depths of the Ocean";
+const TITLE = `${APP_NAME} — Exploring the Depths of the Ocean`;
 const DESCRIPTION =
   "A fascinating journey into the mysteries of the ocean, uncovering the unknown and the beauty beneath the waves.";
 
