@@ -4,6 +4,7 @@ import { Domine, Outfit } from "next/font/google";
 import type { FC, ReactNode } from "react";
 import { Footer } from "~/components/footer";
 import { Header } from "~/components/header";
+import { PreloadResources } from "~/components/preload-resources";
 import { ScrollToTop } from "~/components/scroll-to-top";
 import "./globals.css";
 
@@ -57,6 +58,7 @@ const RootLayout: FC<Props> = ({ children }) => {
           "flex min-h-screen flex-col",
         )}
       >
+        <PreloadResources />
         <Header />
         {children}
         <Footer className="mt-24" />

@@ -26,6 +26,7 @@ const HomePage: FC = () => (
           )}
           blurDataURL="data:image/webp;base64,UklGRiQBAABXRUJQVlA4IBgBAABQDACdASrIAG0APzmYw12vKaakoNgJseAnCWdu3dX+1fwwAetfwAlSLUm8pp9RwqTEPhy2ce5IHEHjW/Hd5G8sg29QLmMF0wQy9a5OS+JgZHShNBdtsMsOZIi1yX5nSuADxUgkwo3//k1owAD+1qPqvyHXFyBn9B6QkQyEimucIbO+G4tfkkVdkSw0y3383alLOTp/VS+lXXSXuwMbjtXWDCUzyG88Rp6cegkeNJqLCfWS+u9OLOlOybbuEISAEAwuBwOTD+XtIuSpvFhURfPOsVe5G4VLTw+3ZjpdKMdCwEJINAHo20/8LoO0wVunnVz+QKtpGtmaHjT4CO3peMAP6P/4ire4U+Yv3tXJ08FRu1N6va1uSgAA"
           placeholder="blur"
+          fetchPriority="high"
           preload
           sizes="100vw"
           width={1408}
