@@ -25,6 +25,7 @@ export const FooterNavigationList: FC<Props> = ({
         <Link
           className="text-dim transition-opacity hover:opacity-80"
           href={href}
+          prefetch={false}
         >
           {text}
         </Link>
