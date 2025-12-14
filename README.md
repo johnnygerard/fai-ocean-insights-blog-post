@@ -1,7 +1,12 @@
-# Next.js 16 Starter
+# OceanInsights Blog Post
 
-This starter repository facilitates the creation of new Next.js projects using the configuration described below.  
-To learn how to use a GitHub template repository, check out [Creating a repository from a template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+## Description
+
+Single-page blog website implemented from [Figma AI](https://www.figma.com/ai/) (see [source design](https://www.figma.com/community/file/1491127600557061132)).
+
+![project status](https://img.shields.io/badge/status-solution_published-success?style=for-the-badge)
+[![live site](https://img.shields.io/badge/live_site-blue?style=for-the-badge)](https://oceaninsights.jgerard.dev/)
+[![Lighthouse report](https://img.shields.io/badge/lighthouse-F44B21?style=for-the-badge&logo=lighthouse&logoColor=fff)](https://googlechrome.github.io/lighthouse/viewer/?gist=dadc89dde3f8b07c05ecf2f7a428094c)
 
 ## Tech Stack
 
@@ -14,6 +19,13 @@ To learn how to use a GitHub template repository, check out [Creating a reposito
 ### Backend
 
 - **CDN**: [Vercel](https://vercel.com/docs/cdn)
+- **Image CDN**: [ImageKit](https://imagekit.io/)
+
+## Generative AI
+
+- **Content and UI design**: [Figma AI](https://www.figma.com/ai/)
+- **Headshot**: [DALL·E 3](https://platform.openai.com/docs/models/dall-e-3)
+- **Video**: [getimg.ai](https://getimg.ai/)
 
 ## How to Update
 
@@ -32,6 +44,16 @@ npm install --save-exact --save-dev prettier@latest prettier-plugin-tailwindcss@
 - **Formatter**: [Prettier](https://prettier.io/)
 - **Linter**: [ESLint](https://eslint.org/)
 - **AI assistant**: [GitHub Copilot](https://github.com/features/copilot)
+
+## Scrolling Screenshots
+
+### Homepage - Desktop (1440px)
+
+![](docs/screenshots/desktop.avif)
+
+### Homepage - Mobile (375px)
+
+![](docs/screenshots/mobile.avif)
 
 ## Copyright
 
