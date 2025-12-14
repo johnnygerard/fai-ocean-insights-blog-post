@@ -20,7 +20,8 @@ export const Logo: FC<Props> = ({ className }) => (
       alt="OceanInsights"
       width={216}
       height={32}
-      priority
+      fetchPriority="high"
+      loading="eager"
       unoptimized
     />
   </Link>
