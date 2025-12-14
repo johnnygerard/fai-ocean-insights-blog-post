@@ -1,8 +1,19 @@
 @import "tailwindcss";
 
 @layer base {
-  button:enabled {
+  button:enabled,
+  [role="button"]:enabled {
     cursor: pointer;
+  }
+
+  a,
+  button,
+  input,
+  select,
+  textarea {
+    @apply outline-2 outline-offset-0 outline-transparent;
+    /* Note that `outline-style` needs the `:focus-visible` pseudo-class to override the `auto` default in Firefox */
+    @apply focus-visible:outline-accent focus-visible:outline-solid;
   }
 }
 
@@ -12,19 +23,21 @@
   }
 }
 
-/* Disable all animations when user prefers reduced motion */
-@media (prefers-reduced-motion: reduce) {
+@media screen and (update: fast) and (prefers-reduced-motion: no-preference) {
   :root {
-    @apply !scroll-auto;
-  }
-
-  * {
-    @apply !animate-none !transition-none;
+    @apply scroll-smooth;
   }
 }
 
-/*noinspection CssUnresolvedCustomProperty,CssInvalidFunction*/
-@theme {
+@media not (update: fast) {
+  * {
+    @apply animate-none! transition-none!;
+  }
+}
+
+/* `@theme inline` is required when referencing CSS custom properties */
+/* @see https://tailwindcss.com/docs/theme#referencing-other-variables */
+@theme inline {
   --breakpoint-sm: 30em; /* Mobile: 480px */
   --breakpoint-md: 48em; /* Tablet: 768px */
   --breakpoint-lg: 64em; /* Laptop: 1024px */

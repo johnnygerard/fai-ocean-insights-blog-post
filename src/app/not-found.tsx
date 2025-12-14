@@ -1,12 +1,12 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
-import { memo } from "react";
+import type { FC } from "react";
 
 export const metadata: Metadata = {
   title: "404 Not Found",
 };
 
-const NotFound = () => {
+const NotFound: FC = () => {
   return (
     <main className="tw_body_px grid flex-1 place-items-center">
       <div className="text-center">
@@ -17,7 +17,9 @@ const NotFound = () => {
           This single-page demo website is part of my{" "}
           <a
             href="https://www.jgerard.dev/"
-            className="font-medium text-accent transition-[opacity] hover:opacity-80"
+            className="font-medium text-accent transition-opacity hover:opacity-80"
+            rel="external noopener noreferrer"
+            target="_blank"
           >
             portfolio
           </a>
@@ -25,7 +27,7 @@ const NotFound = () => {
         </p>
         <Link
           href="/"
-          className="font-medium text-accent transition-[opacity] hover:opacity-80"
+          className="font-medium text-accent transition-opacity hover:opacity-80"
         >
           Back to Home
         </Link>
@@ -34,4 +36,4 @@ const NotFound = () => {
   );
 };
 
-export default memo(NotFound);
+export default NotFound;

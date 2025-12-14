@@ -1,11 +1,11 @@
-import { Footer } from "@/component/footer";
-import { Header } from "@/component/header";
-import { ScrollToTop } from "@/component/scroll-to-top";
 import { clsx } from "clsx";
-import type { Metadata, Viewport } from "next";
+import type { Metadata } from "next";
 import { Domine, Outfit } from "next/font/google";
+import type { FC, ReactNode } from "react";
+import { Footer } from "~/components/footer";
+import { Header } from "~/components/header";
+import { ScrollToTop } from "~/components/scroll-to-top";
 import "./globals.css";
-import { memo, ReactNode } from "react";
 
 const outfit = Outfit({
   display: "swap",
@@ -20,7 +20,7 @@ const domine = Domine({
 });
 
 const APP_NAME = "OceanInsights";
-const TITLE = "Exploring the Depths of the Ocean";
+const TITLE = `${APP_NAME} — Exploring the Depths of the Ocean`;
 const DESCRIPTION =
   "A fascinating journey into the mysteries of the ocean, uncovering the unknown and the beauty beneath the waves.";
 
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://oceaninsights.jgerard.dev"),
   title: {
     template: `%s | ${APP_NAME}`,
-    default: `${TITLE} | ${APP_NAME}`,
+    default: TITLE,
   },
   description: DESCRIPTION,
   openGraph: {
@@ -40,29 +40,20 @@ export const metadata: Metadata = {
   },
 };
 
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
-  maximumScale: 5,
-};
-
 type Props = {
   children: ReactNode;
 };
 
-const RootLayout = ({ children }: Props) => {
+const RootLayout: FC<Props> = ({ children }) => {
   return (
     <html
-      className={clsx(
-        outfit.variable,
-        domine.variable,
-        "scroll-smooth font-sans antialiased",
-      )}
+      className={clsx(outfit.variable, domine.variable)}
+      data-scroll-behavior="smooth"
       lang="en-US"
     >
       <body
         className={clsx(
-          "mx-auto max-w-480 bg-canvas text-base text-[#E4DAD7]",
+          "mx-auto max-w-480 bg-canvas font-sans text-base text-[#E4DAD7]",
           "flex min-h-screen flex-col",
         )}
       >
@@ -75,4 +66,4 @@ const RootLayout = ({ children }: Props) => {
   );
 };
 
-export default memo(RootLayout);
+export default RootLayout;

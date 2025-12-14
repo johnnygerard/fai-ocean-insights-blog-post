@@ -1,12 +1,12 @@
 "use client";
-import { memo } from "react";
+import type { FC } from "react";
 
 type Props = {
   error: Error & { digest?: string };
   reset: () => void;
 };
 
-const Error = ({ reset }: Props) => {
+const Error: FC<Props> = ({ reset }) => {
   return (
     <div>
       <h1>Something went wrong!</h1>
@@ -15,4 +15,4 @@ const Error = ({ reset }: Props) => {
   );
 };
 
-export default memo(Error);
+export default Error;

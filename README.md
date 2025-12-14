@@ -12,23 +12,35 @@ Single-page blog website implemented from [Figma AI](https://www.figma.com/ai/) 
 
 ### Frontend
 
-- **React framework**: [Next.js 15](https://nextjs.org/)
+- **UI library**: [React 19](https://react.dev/)
+- **Framework**: [Next.js 16](https://nextjs.org/)
 - **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
 
 ### Backend
 
-- **CDN**: Static assets served from [Vercel Edge Network](https://vercel.com/docs/edge-network/overview).
+- **CDN**: [Vercel](https://vercel.com/docs/cdn)
+- **Image CDN**: [ImageKit](https://imagekit.io/)
 
-## AI-Generated Content
+## Generative AI
 
-- **Text and images**: [Figma AI](https://www.figma.com/ai/)
+- **Content and UI design**: [Figma AI](https://www.figma.com/ai/)
+- **Headshot**: [DALL·E 3](https://platform.openai.com/docs/models/dall-e-3)
 - **Video**: [getimg.ai](https://getimg.ai/)
-- **Headshot**: [DALL·E 3](https://openai.com/index/dall-e-3/)
+
+## How to Update
+
+To check for outdated packages, run `npm outdated`.
+
+```bash
+# Update dependencies (this will rewrite package-lock.json and package.json)
+npm update --save
+npm install --save-exact --save-dev prettier@latest prettier-plugin-tailwindcss@latest
+```
 
 ## Dev Environment & Tools
 
 - **System**: [Ubuntu](https://ubuntu.com/desktop)
-- **Editor**: [WebStorm](https://www.jetbrains.com/webstorm/)
+- **Editor**: [VS Code](https://code.visualstudio.com/)
 - **Formatter**: [Prettier](https://prettier.io/)
 - **Linter**: [ESLint](https://eslint.org/)
 - **AI assistant**: [GitHub Copilot](https://github.com/features/copilot)
@@ -37,11 +49,11 @@ Single-page blog website implemented from [Figma AI](https://www.figma.com/ai/) 
 
 ### Homepage - Desktop (1440px)
 
-![](doc/screenshot/desktop.avif)
+![](docs/screenshots/desktop.avif)
 
 ### Homepage - Mobile (375px)
 
-![](doc/screenshot/mobile.avif)
+![](docs/screenshots/mobile.avif)
 
 ## Copyright
 
