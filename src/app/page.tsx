@@ -24,7 +24,7 @@ const HomePage: FC = () => (
             "my-6 w-full object-cover max-md:object-left",
             "h-120 sm:h-160 md:h-180 lg:h-220",
           )}
-          priority
+          preload
           sizes="100vw"
           width={1408}
           height={768}
