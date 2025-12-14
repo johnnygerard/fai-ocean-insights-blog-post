@@ -45,27 +45,25 @@ type Props = {
   children: ReactNode;
 };
 
-const RootLayout: FC<Props> = ({ children }) => {
-  return (
-    <html
-      className={clsx(outfit.variable, domine.variable)}
-      data-scroll-behavior="smooth"
-      lang="en-US"
+const RootLayout: FC<Props> = ({ children }) => (
+  <html
+    className={clsx(outfit.variable, domine.variable)}
+    data-scroll-behavior="smooth"
+    lang="en-US"
+  >
+    <body
+      className={clsx(
+        "mx-auto max-w-480 bg-canvas font-sans text-base text-[#E4DAD7]",
+        "flex min-h-screen flex-col",
+      )}
     >
-      <body
-        className={clsx(
-          "mx-auto max-w-480 bg-canvas font-sans text-base text-[#E4DAD7]",
-          "flex min-h-screen flex-col",
-        )}
-      >
-        <PreloadResources />
-        <Header />
-        {children}
-        <Footer className="mt-24" />
-        <ScrollToTop />
-      </body>
-    </html>
-  );
-};
+      <PreloadResources />
+      <Header />
+      {children}
+      <Footer className="mt-24" />
+      <ScrollToTop />
+    </body>
+  </html>
+);
 
 export default RootLayout;
