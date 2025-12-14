@@ -2,11 +2,11 @@ import { clsx } from "clsx";
 import type { Metadata } from "next";
 import { Domine, Outfit } from "next/font/google";
 import type { FC, ReactNode } from "react";
+import "~/app/globals.css";
 import { Footer } from "~/components/footer";
 import { Header } from "~/components/header";
 import { PreloadResources } from "~/components/preload-resources";
 import { ScrollToTop } from "~/components/scroll-to-top";
-import "./globals.css";
 
 const outfit = Outfit({
   display: "swap",
