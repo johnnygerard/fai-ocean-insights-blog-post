@@ -14,7 +14,7 @@ type Props = {
 export const ArticlePreview: FC<Props> = ({
   className,
   article: {
-    image: { name, alt },
+    image: { name, alt, blurDataURL },
     title,
     tags,
     date,
@@ -27,6 +27,8 @@ export const ArticlePreview: FC<Props> = ({
       className="h-56 w-full rounded-lg object-cover"
       src={`article-preview/${name}`}
       alt={alt}
+      blurDataURL={blurDataURL}
+      placeholder="blur"
       sizes={imageSizes}
       width={704}
       height={384}

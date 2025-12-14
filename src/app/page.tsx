@@ -24,6 +24,8 @@ const HomePage: FC = () => (
             "my-6 w-full object-cover max-md:object-left",
             "h-120 sm:h-160 md:h-180 lg:h-220",
           )}
+          blurDataURL="data:image/webp;base64,UklGRiQBAABXRUJQVlA4IBgBAABQDACdASrIAG0APzmYw12vKaakoNgJseAnCWdu3dX+1fwwAetfwAlSLUm8pp9RwqTEPhy2ce5IHEHjW/Hd5G8sg29QLmMF0wQy9a5OS+JgZHShNBdtsMsOZIi1yX5nSuADxUgkwo3//k1owAD+1qPqvyHXFyBn9B6QkQyEimucIbO+G4tfkkVdkSw0y3383alLOTp/VS+lXXSXuwMbjtXWDCUzyG88Rp6cegkeNJqLCfWS+u9OLOlOybbuEISAEAwuBwOTD+XtIuSpvFhURfPOsVe5G4VLTw+3ZjpdKMdCwEJINAHo20/8LoO0wVunnVz+QKtpGtmaHjT4CO3peMAP6P/4ire4U+Yv3tXJ08FRu1N6va1uSgAA"
+          placeholder="blur"
           preload
           sizes="100vw"
           width={1408}
@@ -55,6 +57,8 @@ const HomePage: FC = () => (
               "w-full rounded-lg object-cover",
               "h-120 sm:h-132 md:h-144 lg:h-156",
             )}
+            blurDataURL="data:image/webp;base64,UklGRgABAABXRUJQVlA4IPQAAAAwCgCdASrIAFsAPzmcxF4vKqakoGmp4CcJZ27eUANRePUAbl5PgrzgTlon+mudY8rQBu+GRU0MTAvudijkqX+DwOCTcq10a8mwRK/CHzSDLQJxQ/XjqaN+ggAA/uVNmT+nZo/xX0ZntZRuuCYCyE5NDngqqUW22CTo2CQtnDVEkFywfGUKYFo4GShXw4lGQUCUDOSLiRJhlaOBZ1anx0D+o2VNCrmW8U/bUaWMdK7htonmaij0tn8dBfTKofEmC4shQoR30rUf/5i/W0Xs7tHUTjIVSiFkzK/CfRCnzT0Uj7IQjxgOGJojKf0C+YE/9NW5wAAA"
+            placeholder="blur"
             width={1408}
             height={640}
             sizes="100vw"
